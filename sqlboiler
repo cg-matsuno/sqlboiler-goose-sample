@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export GO111MODULE="off"
+go get -u github.com/volatiletech/sqlboiler
+go get -v github.com/volatiletech/sqlboiler/drivers/sqlboiler-psql
+go get -v  github.com/ericlagergren/decimal
+go get -v  github.com/volatiletech/null
+go get -v  github.com/kat-co/vala
+export GO111MODULE="on"
+ sqlboiler psql --config ./sqlboiler.toml --pkgname dbmodels --wipe --add-global-variants --no-hooks --struct-tag-casing camel --output dbmodels
+ go test ./dbmodels/*.go
