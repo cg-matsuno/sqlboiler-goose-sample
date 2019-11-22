@@ -1,9 +1,0 @@
-[psql]
-  dbname = "testdb"
-  host = "localhost"
-  pass = "matsuno"
-  port = 5432
-  sslmode = "disable"
-  schema="public"
-  user = "matsuno"
-  blacklist=["goose_db_version"]

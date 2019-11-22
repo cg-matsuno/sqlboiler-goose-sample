@@ -1,5 +1,0 @@
-FROM postgres:11
-ENV POSTGRES_USER matsuno
-ENV POSTGRES_PASSWORD matsuno
-ENV POSTGRES_DB testdb 
-ENV TZ "Asia/Tokyo"

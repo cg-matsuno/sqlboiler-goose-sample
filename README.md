@@ -2,10 +2,15 @@
 
 ## Install Dependency
 
-- psql client
+- psql 11 client
 
 ```
 brew install postgresql
+```
+
+```
+psql --version
+psql (PostgreSQL) 11.5
 ```
 
 ## GOOSE
@@ -13,19 +18,19 @@ brew install postgresql
 - install [goose](https://github.com/pressly/goose)
 
 ```
-$ GO111MODULE=off go get -u github.com/pressly/goose/cmd/goose
+GO111MODULE=off go get -u github.com/pressly/goose/cmd/goose
 ```
 
 - build postgres image
 
 ```
-$ make build-test-db
+make build-test-db
 ```
 
 - create postgres server
 
 ```
-$ make run-test-db
+make run-test-db
 ```
 
 - migration
@@ -33,13 +38,15 @@ $ make run-test-db
 Apply all available migrations.
 
 ```
-$ ./goose up
+cd db
+./goose up
 ```
 
 - roll back
 
 ```
-$ ./goose down
+cd db
+./goose down
 ```
 
 
@@ -48,11 +55,13 @@ $ ./goose down
 - generate
 
 ```
-$ ./sqlboiler
+cd db
+./sqlboiler
 ```
 
 - go test
 
 ```
-$ go test ./dbmodels
+cd db
+go test ./dbmodels
 ```
