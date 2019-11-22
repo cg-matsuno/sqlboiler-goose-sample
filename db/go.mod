@@ -1,6 +1,6 @@
-module github.com/omeroid/genome-db
+module github.com/cg-matsuno/sqlboiler-goose-sample/db
 
-go 1.12
+go 1.13
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.3.3 // indirect

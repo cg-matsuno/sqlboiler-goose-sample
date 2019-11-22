@@ -12,7 +12,7 @@ PKGS = ./. ./db
 all: build test
 
 build:
-	go build -v -o ./bin/goose ./cmd/
+	(cd db && go build -v -o ./bin/goose ./cmd/)
 
 install:
 	go install ./cmd/
